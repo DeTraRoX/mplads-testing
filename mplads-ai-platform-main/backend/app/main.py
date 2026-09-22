@@ -24,12 +24,14 @@ from scripts.seed_db import seed_database_internal
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Lifespan context manager for database initialization and ML model warm-up."""
-    # Ensure tables exist without breaking server startup if network is transiently unreachable
+    """Lifespan context manager for database initialization."""
+
     try:
         await init_db()
     except Exception as err:
         print(f"[MPLADS Startup] Database connection notice during startup: {err}")
+
+    yield
 
     # # Pre-seed sample database if completely empty
     # async with AsyncSessionLocal() as session:
