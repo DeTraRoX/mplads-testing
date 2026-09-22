@@ -1,0 +1,55 @@
+# Source code
+**/__pycache__
+**/*.py[cod]
+**/*.pyo
+**/*.pyd
+src/**/*.py
+frontend/src/**/*.py
+
+# Git
+.git
+.gitignore
+.gitmodules
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.env
+
+# Tests
+**/test
+**/*.test.py
+**/*.test.js
+**/tests/**
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Build
+.DS_Store
+Thumbs.db
+*.log
+logs/
+node_modules
+frontend/node_modules
+backend/venv
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+.cache/

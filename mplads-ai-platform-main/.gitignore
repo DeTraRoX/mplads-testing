@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+backend/*.log
+frontend/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build outputs
+frontend/dist/
+frontend/build/
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# PID files
+*.pid
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ML Models cache
+backend/venv/
+.sentence-transformers/
+
+# Package locks (keep package-lock.json but ignore yarn.lock)
+yarn.lock
+pnpm-lock.yaml
