@@ -12,3 +12,4 @@ pillow==11.1.0
 pyjwt==2.10.1
 onnxruntime==1.23.2
 tokenizers==0.21.4
+psycopg2-binary

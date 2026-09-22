@@ -8,6 +8,13 @@ DEFAULT_SQLITE_URL = "sqlite+aiosqlite:///./mplads.db"
 # Local prototype defaults to SQLite. Set DATABASE_URL for PostgreSQL.
 DATABASE_URL = os.getenv("DATABASE_URL", DEFAULT_SQLITE_URL)
 
+if DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = DATABASE_URL.replace(
+        "postgresql://",
+        "postgresql+asyncpg://",
+        1
+    )
+
 use_sqlite = DATABASE_URL.startswith("sqlite")
 if not use_sqlite:
     try:
