@@ -31,16 +31,16 @@ async def lifespan(app: FastAPI):
     except Exception as err:
         print(f"[MPLADS Startup] Database connection notice during startup: {err}")
 
-    # Pre-seed sample database if completely empty
-    async with AsyncSessionLocal() as session:
-        try:
-            seeded_count = await seed_database_internal(session, force_if_empty=True)
-            if seeded_count > 0:
-                print(f"[MPLADS Startup] Pre-populated database with {seeded_count} project records.")
-        except Exception as err:
-            print(f"[MPLADS Startup] Seeding notice: {err}")
+    # # Pre-seed sample database if completely empty
+    # async with AsyncSessionLocal() as session:
+    #     try:
+    #         seeded_count = await seed_database_internal(session, force_if_empty=True)
+    #         if seeded_count > 0:
+    #             print(f"[MPLADS Startup] Pre-populated database with {seeded_count} project records.")
+    #     except Exception as err:
+    #         print(f"[MPLADS Startup] Seeding notice: {err}")
 
-    yield
+    # yield
 
 app = FastAPI(
     title="MPLAD Scheme AI-Powered Anomaly & Fraud Detection API",
@@ -54,7 +54,7 @@ origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
-    "https://mplads-testing-1.onrender.com"
+    "https://mplads-testing-1.onrender.com
 ]
 
 app.add_middleware(
