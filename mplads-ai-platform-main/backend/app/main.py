@@ -54,7 +54,7 @@ origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
-    "https://mplads-testing-1.onrender.com
+    "https://mplads-testing-1.onrender.com"
 ]
 
 app.add_middleware(
