@@ -63,3 +63,4 @@ backend/venv/
 # Package locks (keep package-lock.json but ignore yarn.lock)
 yarn.lock
 pnpm-lock.yaml
+supbase.txt
